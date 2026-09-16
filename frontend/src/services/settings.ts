@@ -7,7 +7,7 @@ export function getBackendUrl(): string {
   if (stored && stored.trim()) {
     return stored.trim().replace(/\/$/, "");
   }
-  const fromEnv = import.meta.env.VITE_API_URL;
+const fromEnv = import.meta.env.VITE_API_BASE_URL;
   if (fromEnv && fromEnv.trim()) {
     return fromEnv.trim().replace(/\/$/, "");
   }
